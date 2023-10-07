@@ -27,17 +27,11 @@ LETTER_CONVERTER = {
 	'z' => 26
 }
 
-def convert_user_string : Int32
-	user_string = gets
-	if user_string.nil?
-		raise Exception.new "User input is Nil"
-	end
+def convert_user_string(input : String) : Int32
 	count = 0
-	user_string.each_char do |char|
+	input.each_char do |char|
 		count += LETTER_CONVERTER[char]
 	end
 	count
 end
-
-puts convert_user_string
 
