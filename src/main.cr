@@ -28,10 +28,9 @@ LETTER_CONVERTER = {
 }
 
 def convert_user_string(input : String) : Int32
-	count = 0
-	input.each_char do |char|
-		count += LETTER_CONVERTER[char]
+	input_characters = input.chars
+	input_characters.sum do |char|
+		LETTER_CONVERTER[char]
 	end
-	count
 end
 
