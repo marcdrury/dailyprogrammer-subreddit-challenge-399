@@ -1,5 +1,5 @@
 module StringConverter
-	private LETTER_CONVERTER = {
+	private LETTER_TO_INT = {
 		'a' => 1,
 		'b' => 2,
 		'c' => 3,
@@ -30,7 +30,7 @@ module StringConverter
 	
 	def self.convert(input : String) : Int32
 		input.each_char.sum do |char|
-			LETTER_CONVERTER[char]
+			LETTER_TO_INT[char]
 		end
 	end
 end
