@@ -28,7 +28,7 @@ private LETTER_CONVERTER = {
 }
 
 module StringConverter
-	def convert(input : String) : Int32
+	def self.convert(input : String) : Int32
 		input.each_char.sum do |char|
 			LETTER_CONVERTER[char]
 		end
