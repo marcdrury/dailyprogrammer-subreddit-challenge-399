@@ -1,4 +1,4 @@
-LETTER_CONVERTER = {
+private LETTER_CONVERTER = {
 	'a' => 1,
 	'b' => 2,
 	'c' => 3,
@@ -27,9 +27,11 @@ LETTER_CONVERTER = {
 	'z' => 26
 }
 
-def convert_user_string(input : String) : Int32
-	input.each_char.sum do |char|
-		LETTER_CONVERTER[char]
+module StringConverter
+	def convert(input : String) : Int32
+		input.each_char.sum do |char|
+			LETTER_CONVERTER[char]
+		end
 	end
 end
 
