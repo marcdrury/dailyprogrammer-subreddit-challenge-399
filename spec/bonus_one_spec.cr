@@ -3,7 +3,8 @@ require "../src/bonus_one.cr"
 
 describe "BonusOne#solve" do
 	it "finds the correct word" do
-		(BonusOne.solve).should eq "reinstitutionalizations"
+		expected_word = "reinstitutionalizations"
+		(BonusOne.solve).should eq expected_word
 	end
 end
 
