@@ -4,10 +4,9 @@ module BonusOne
 	def self.solve : String
 		words = self.get_words
 		valid_word = self.find_word_with_target_sum words
-
 		if valid_word.nil?
 			raise Exception.new "Failed to solve bonus challenge one. Found no words
-		with the sum of 319."
+			with the sum of 319."
 		end
 		valid_word
 	end
