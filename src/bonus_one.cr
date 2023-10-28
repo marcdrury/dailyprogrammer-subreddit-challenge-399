@@ -1,3 +1,5 @@
+require "./string_converter.cr"
+
 module BonusOne
 	private TARGET_WORD_SUM = 319
 
